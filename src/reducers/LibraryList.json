@@ -27,4 +27,8 @@
   "title": "ESLint",
   "description": "ESLint is an open source JavaScript linting utility originally created by Nicholas C. Zakas in June 2013. Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn't adhere to certain style guidelines."
   },
+  {"id": 7,
+  "title": "Babel",
+  "description": "Babel has support for the latest version of JavaScript through syntax transformers. These plugins allow you to use new syntax, right now without waiting for browser support."
+  },
 ]
