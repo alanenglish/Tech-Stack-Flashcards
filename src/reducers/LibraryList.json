@@ -31,4 +31,8 @@
   "title": "Babel",
   "description": "Babel has support for the latest version of JavaScript through syntax transformers. These plugins allow you to use new syntax, right now without waiting for browser support."
   },
+  {"id": 8,
+  "title": "Axios",
+  "description": "Promise based HTTP client for the browser and node.js. With Axios, you can make XMLHttpRequests from the browser or Node with the full Promise Api."
+  }
 ]
