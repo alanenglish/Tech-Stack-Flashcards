@@ -15,4 +15,8 @@
   "title": "React-Redux",
   "description": "React-Redux is the official set of bindings between the React and Redux libraries. With this library you can keep your views and data in sync."
   },
+  {"id": 4,
+  "title": "Lodash",
+  "description": "A modern JavaScript utility library delivering modularity, performance, & extras. Lodash is released under the MIT license & supports modern environments."
+  },
 ]
