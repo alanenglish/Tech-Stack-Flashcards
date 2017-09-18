@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import {
+  Text,
+  TouchableWithoutFeedback,
+  View,
+  LayoutAnimation
+} from 'react-native';
 import { connect } from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
+  // called whenever app is about to be rerendered to the device
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
+
   renderDesription() {
     const { library, expanded } = this.props;
     if (expanded) {
       return (
-        <Text>{library.description}</Text>
+        <CardSection>
+          <Text style={styles.descriptionStyle}>
+            {library.description}
+          </Text>
+        </CardSection>
       );
     }
   }
@@ -24,7 +38,7 @@ class ListItem extends Component {
         <View>
           <CardSection>
             <Text style={titleStyle}>
-              {this.props.library.title}
+              {title}
             </Text>
           </CardSection>
           {this.renderDesription()}
@@ -38,6 +52,11 @@ const styles = {
   titleStyle: {
     fontSize: 18,
     paddingLeft: 15
+  },
+  descriptionStyle: {
+    flex: 1,
+    paddingLeft: 10,
+    paddingRight: 10
   }
 };
 
