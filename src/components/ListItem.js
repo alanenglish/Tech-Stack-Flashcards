@@ -6,8 +6,8 @@ import * as actions from '../actions';
 
 class ListItem extends Component {
   renderDesription() {
-    const { library, selectedLibraryId } = this.props;
-    if (library.id === selectedLibraryId) {
+    const { library, expanded } = this.props;
+    if (expanded) {
       return (
         <Text>{library.description}</Text>
       );
@@ -41,8 +41,12 @@ const styles = {
   }
 };
 
-const mapStateToProps = state => {
-  return { selectedLibraryId: state.selectedLibraryId };
+// any props that we pass into list item component, will show up in map state
+// to props as ownProps
+const mapStateToProps = (state, ownProps) => {
+  const expanded = state.selectedLibraryId === ownProps.library.id;
+
+  return { expanded };
 };
 
 export default connect(mapStateToProps, actions)(ListItem);
