@@ -20,6 +20,6 @@ const styles = {
     fontSize: 18,
     paddingLeft: 15
   }
-}
+};
 
 export default ListItem;
